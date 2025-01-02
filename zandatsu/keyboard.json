@@ -5,7 +5,7 @@
     "development_board": "promicro",
     "diode_direction": "ROW2COL",
 	"joystick": {
-        "button_count": 0,
+        "button_count": 17,
         "axis_resolution": 10,
         "axes": {
             "x": {"input_pin": "B4", "low": 1023, "rest": 512, "high": 0},
@@ -15,14 +15,14 @@
     "features": {
         "bootmagic": true,
         "command": false,
-        "console": false,
+        "console": true,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
 		"joystick": true 
     },
     "matrix_pins": {
-        "cols": ["F4", "F5", "F6", "F7", "B6",]
+        "cols": ["F4", "F5", "F6", "F7", "B6"],
         "rows": ["E6", "B1", "B2", "B3"]
     },
     "url": "",
