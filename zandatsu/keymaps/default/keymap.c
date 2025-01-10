@@ -4,7 +4,7 @@
 // 	qmk compile -kb zandatsu -km default
 // 	cd qmk_firmware
 // 	qmk flash zandatsu_default.hex
-// 	qmk flash zandatsu_default.hex -e CONVERT_TO=rp2040_ce (with RP2040)
+// 	qmk flash zandatsu_default.uf2 -e CONVERT_TO=rp2040_ce (with RP2040)
 /*
    ...(0)(1)(2)(3)(4)
 (0)       X  X  X
@@ -14,7 +14,6 @@
      */
 
 #include QMK_KEYBOARD_H
-#define _zandatsu
 
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
@@ -30,6 +29,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #endif 
     return true;
 }
+
+enum layers{
+	_zandatsu
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_zandatsu] = LAYOUT(
